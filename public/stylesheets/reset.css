@@ -1,0 +1,49 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: .1rem solid;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2, 
+h3,
+h4, 
+p {
+  margin: 0;
+  padding: 0;
+}
