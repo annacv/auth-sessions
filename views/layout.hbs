@@ -7,9 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel="stylesheet" href="/css/reset.css">
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheets">
 </head>
+
+<header>
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li class="navbar-list-item">
+        <a class="navbar-list-link" href="/">Home</a>
+      </li>
+
+      {{#unless currentUser}}
+      <li class="navbar-list-item">
+        <a class="navbar-list-link" href="/auth/signup">Signup</a>
+      </li>
+      <li class="navbar-list-item">
+        <a class="navbar-list-link" href="/auth/login">Login</a>
+      </li>
+      {{/unless}}
+
+      {{#if currentUser}}
+      <li class="navbar-list-item">
+        <a class="navbar-list-link" href="/users/private">UZone</a>
+      </li>
+      <li class="navbar-list-item">
+        <form action="/auth/logout" method="POST">
+          <button type="submit">Logout</button>
+        </form>
+      </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
 
 <body>
   {{{body}}}
